@@ -12,6 +12,11 @@
     "Middlewares": ["middlewares", "express-middlewares"]
   },
   "packages": {
-    "Packages": ["packages/index", "packages/body-parser", "packages/websocket"]
+    "Packages": [
+      "packages/index",
+      "packages/body-parser",
+      "packages/cookies",
+      "packages/websocket"
+    ]
   }
 }

@@ -4,7 +4,7 @@ title: Body Parser
 ---
 
 You can use [`@routex/body-parser`](https://www.npmjs.com/package/@routex/websocket) for body parsing.
-Body parsingis based on [`body-parser`](https://www.npmjs.com/package/body-parser).
+Body parsing is based on [`body-parser`](https://www.npmjs.com/package/body-parser).
 
 ## Install
 
