@@ -1,0 +1,17 @@
+{
+  "docs": {
+    "Getting Started": ["introduction", "installation", "listen"],
+    "Routes": [
+      "routes",
+      "child-routers",
+      "parameters",
+      "query-string",
+      "headers",
+      "request-id"
+    ],
+    "Middlewares": ["middlewares", "express-middlewares"]
+  },
+  "packages": {
+    "Packages": ["packages/index", "packages/body-parser", "packages/websocket"]
+  }
+}
