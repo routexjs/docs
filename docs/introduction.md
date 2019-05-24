@@ -3,7 +3,7 @@ id: introduction
 title: Introduction
 ---
 
-Routex is a modern Node router.
+[Routex](https://www.npmjs.com/package/routex) is a modern Node router.
 
 ## Features
 
