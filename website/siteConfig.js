@@ -1,43 +1,42 @@
 const siteConfig = {
-  title: 'Routex', // Title for your website.
-  tagline: 'Modern Node Router',
-  url: 'https://routex.js.org', // Your website URL
-  baseUrl: '/',
+  title: "Routex", // Title for your website.
+  tagline: "Modern Node Router",
+  url: "https://routex.js.org", // Your website URL
+  baseUrl: "/",
 
-  projectName: 'Routex',
-  organizationName: 'Cretezy',
+  projectName: "Routex",
+  organizationName: "Cretezy",
 
   headerLinks: [
-    {doc: 'introduction', label: 'Docs'},
-    {doc: 'packages/index', label: 'Packages'},
-    {href: 'https://github.com/Cretezy/routex', label: 'GitHub'},
+    { doc: "introduction", label: "Docs" },
+    { doc: "packages/index", label: "Packages" },
+    { href: "https://github.com/Cretezy/routex", label: "GitHub" }
   ],
 
-
-  headerIcon: 'img/icon.svg',
-  footerIcon: 'img/icon.svg',
-  favicon: 'img/icon.png',
+  headerIcon: "img/icon.svg",
+  footerIcon: "img/icon.svg",
+  favicon: "img/icon.png",
 
   colors: {
-    primaryColor: '#228be6',
-    secondaryColor: '#748ffc',
+    primaryColor: "#228be6",
+    secondaryColor: "#748ffc"
   },
 
   copyright: `Copyright © ${new Date().getFullYear()} Charles Crete`,
 
   highlight: {
-    theme: 'monokai',
+    theme: "monokai"
   },
 
-  scripts: ['https://buttons.github.io/buttons.js'],
+  scripts: ["https://buttons.github.io/buttons.js"],
 
-  onPageNav: 'separate',
+  onPageNav: "separate",
   cleanUrl: true,
 
-  ogImage: 'img/undraw_online.svg',
-  twitterImage: 'img/undraw_tweetstorm.svg',
+  ogImage: "img/undraw_online.svg",
+  twitterImage: "img/undraw_tweetstorm.svg",
 
-    repoUrl: 'https://github.com/Cretezy/routex',
+  repoUrl: "https://github.com/Cretezy/routex"
 };
 
 module.exports = siteConfig;
