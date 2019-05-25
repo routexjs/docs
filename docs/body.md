@@ -44,6 +44,9 @@ app.get("/pretty", ctx => {
 
 You can create your own body type by implementing the `Body` interface:
 
+<!--DOCUSAURUS_CODE_TABS-->
+<!--JavaScript-->
+
 ```js
 class TestBody {
   constructor() {
@@ -64,4 +67,26 @@ app.get("/", ctx => {
 });
 ```
 
-In TypeScript, make sure to extend the `IBody` interface.
+<!--TypeScript-->
+
+```typescript
+import { IBody } from "routex";
+
+class TestBody implements IBody {
+  readonly body = "text";
+  readonly contentLength = this.body.length;
+  readonly contentType = "text/plain";
+
+  write = response => {
+    response.write(this.body);
+  };
+
+  toString = () => this.body;
+}
+
+app.get("/", ctx => {
+  ctx.body = new TestBody();
+});
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->

@@ -38,7 +38,8 @@ const siteConfig = {
 
   repoUrl: "https://github.com/routexjs/routex",
 
-  editUrl: "https://github.com/routexjs/docs/edit/master/docs/"
+  editUrl: "https://github.com/routexjs/docs/edit/master/docs/",
+  usePrism: true
 };
 
 module.exports = siteConfig;
