@@ -14,6 +14,8 @@ app.middleware(useExpress(cors()));
 
 This enables the `(req, res) => ...` or `(req, res, next) => ...` syntax.
 
+> When using `(res, res, next) => ...`, calling `next` is required. Using `(req, res) => ...` will be called synchronously.
+
 ## Known working
 
 List of tested Express middlewares:
