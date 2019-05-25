@@ -11,7 +11,7 @@ yarn add routex
 npm install routex
 ```
 
-## Usage
+## Hello World
 
 Create an `index.js` and setup your first Routex server:
 

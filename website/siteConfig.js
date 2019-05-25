@@ -19,7 +19,7 @@ const siteConfig = {
 
   colors: {
     primaryColor: "#228be6",
-    secondaryColor: "#748ffc"
+    secondaryColor: "#4dabf7"
   },
 
   copyright: `Copyright © ${new Date().getFullYear()} Charles Crete`,

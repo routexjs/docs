@@ -1,11 +1,11 @@
-const React = require('react');
+import React from "react";
 
 class Footer extends React.Component {
   docUrl(doc, language) {
     const baseUrl = this.props.config.baseUrl;
     const docsUrl = this.props.config.docsUrl;
-    const docsPart = `${docsUrl ? `${docsUrl}/` : ''}`;
-    const langPart = `${language ? `${language}/` : ''}`;
+    const docsPart = `${docsUrl ? `${docsUrl}/` : ""}`;
+    const langPart = `${language ? `${language}/` : ""}`;
     return `${baseUrl}${docsPart}${langPart}${doc}`;
   }
 
@@ -25,41 +25,41 @@ class Footer extends React.Component {
           </a>
           <div>
             <h5>Docs</h5>
-            <a href={this.docUrl('introduction')}>
-              Docs
-            </a>
-            <a href={this.docUrl('packages')}>
-              Packages
-            </a>
+            <a href={this.docUrl("introduction")}>Docs</a>
+            <a href={this.docUrl("packages")}>Packages</a>
           </div>
           <div>
             <h5>Community</h5>
             <a
               href="http://stackoverflow.com/questions/tagged/routex"
               target="_blank"
-              rel="noreferrer noopener">
+              rel="noreferrer noopener"
+            >
               Stack Overflow
             </a>
             <a
-                href="#"
-                target="_blank"
-                rel="noreferrer noopener">
+              href="https://spectrum.chat/routex"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               Project Chat
             </a>
           </div>
           <div>
             <h5>More</h5>
-            <a href="https://github.com/Cretezy/routex">GitHub</a>
+            <a href={this.props.config.repoUrl}>GitHub</a>
             <a
               className="github-button"
               href={this.props.config.repoUrl}
               data-icon="octicon-star"
-              data-count-href="/facebook/docusaurus/stargazers"
+              data-count-href="/Cretezy/routex/stargazers"
               data-show-count="true"
               data-count-aria-label="# stargazers on GitHub"
-              aria-label="Star this project on GitHub">
+              aria-label="Star this project on GitHub"
+            >
               Star
             </a>
+            <a href="https://www.npmjs.com/package/routex">npm</a>
           </div>
         </section>
         <section className="copyright">{this.props.config.copyright}</section>

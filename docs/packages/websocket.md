@@ -10,7 +10,7 @@ WebSocket support is based on [ws](https://www.npmjs.com/package/ws).
 
 ```bash
 yarn add @routex/websocket
-# or 
+# or
 npm add @routex/websocket
 ```
 
