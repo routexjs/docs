@@ -36,7 +36,9 @@ const siteConfig = {
   ogImage: "img/undraw_online.svg",
   twitterImage: "img/undraw_tweetstorm.svg",
 
-  repoUrl: "https://github.com/routexjs/routex"
+  repoUrl: "https://github.com/routexjs/routex",
+
+  editUrl: "https://github.com/routexjs/docs/edit/master/docs/"
 };
 
 module.exports = siteConfig;
