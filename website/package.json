@@ -1,15 +1,16 @@
 {
   "scripts": {
-    "start": "docusaurus-start",
     "build": "docusaurus-build",
+    "format": "prettier --write 'core/*.js' 'static/css/*.css' siteConfig.js sidebars.json package.json '../docs/**/*.md'",
     "publish-gh-pages": "docusaurus-publish",
-    "write-translations": "docusaurus-write-translations",
-    "version": "docusaurus-version",
     "rename-version": "docusaurus-rename-version",
-    "format": "prettier --write 'core/*.js' 'static/css/*.css' siteConfig.js sidebars.json package.json '../docs/**/*.md'"
+    "start": "docusaurus-start",
+    "version": "docusaurus-version",
+    "write-translations": "docusaurus-write-translations"
   },
   "devDependencies": {
     "docusaurus": "^1.10.0",
-    "prettier": "^1.17.1"
+    "prettier": "^1.17.1",
+    "routex": "^0.0.14"
   }
 }

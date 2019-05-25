@@ -1,6 +1,12 @@
 {
   "docs": {
-    "Getting Started": ["introduction", "installation", "listen"],
+    "Getting Started": [
+      "introduction",
+      "installation",
+      "listen",
+      "body",
+      "typescript"
+    ],
     "Routes": [
       "routes",
       "child-routers",
