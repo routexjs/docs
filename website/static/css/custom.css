@@ -36,3 +36,11 @@
 .buttonWrapper {
   padding: 0 3px;
 }
+
+.nav-tabs {
+  border-bottom: none;
+}
+
+.tabs {
+  border-top: none;
+}
