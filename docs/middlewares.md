@@ -47,3 +47,39 @@ app
     });
   });
 ```
+
+## Example: Auth Middleware
+
+A common use case is to have a middleware to protect routes to authenticated users.
+
+```js
+const { ErrorWithStatusCode } = require("routex");
+
+async function withAuth(ctx) {
+  // Using @routex/cookies
+  const token = ctx.cookies.get("token");
+  // Using Authorization header (removes "Bearer ")
+  const token =
+    ctx.req.headers["authorization"] &&
+    ctx.req.headers["authorization"].splice(7);
+
+  if (!token) {
+    throw new ErrorWithStatusCode(400, ["Missing token"]);
+  }
+
+  const user = await getUserByToken(token);
+
+  if (!user) {
+    throw new ErrorWithStatusCode(400, ["Invalid token"]);
+  }
+
+  ctx.data.user = user;
+  ctx.data.token = token;
+}
+
+// Single route
+app.get("/protected", [withAuth, protectedRoute]);
+
+// Child router
+app.child("/protected", protectedRouter).middleware(withAuth);
+```
