@@ -13,7 +13,8 @@
       "parameters",
       "query-string",
       "headers",
-      "request-id"
+      "request-id",
+      "errors"
     ],
     "Middlewares": ["middlewares", "express-middlewares"]
   },
