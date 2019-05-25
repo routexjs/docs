@@ -20,9 +20,12 @@ Setup your app:
 ```js
 const { Routex, TextBody } = require("routex");
 const cookies = require("@routex/cookies");
+
 const port = process.env.PORT || 3000;
 const app = new Routex();
+
 app.use(cookies());
+
 app.get("/", ctx => {
   const name = ctx.cookies.get("name");
   if (!name) {
@@ -30,6 +33,7 @@ app.get("/", ctx => {
   }
   ctx.body = new TextBody("Set name cookie");
 });
+
 app.listen(port).then(() => console.log(`Listening on ${port}`));
 ```
 
@@ -41,6 +45,7 @@ You can use `ctx.cookies.get(cookie)` or `ctx.cookies.all` to get cookies:
 app.get("/a", ctx => {
   const name = ctx.cookies.get("name");
 });
+
 app.get("/b", ctx => {
   const { name } = ctx.cookies.all;
 });
