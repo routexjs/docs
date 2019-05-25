@@ -13,6 +13,7 @@
       "parameters",
       "query-string",
       "headers",
+      "context-data",
       "request-id",
       "errors"
     ],
