@@ -9,4 +9,4 @@ Routex comes with a few first-party packages, designed for common uses.
 - [Cookies](./cookies.md)
 - [WebSocket](./websocket.md)
 
-We also actively encourage third-party packages. File [an issue](https://github.com/Cretezy/routex-docs/issues/new) to get your listed here!
+We also actively encourage third-party packages. File [an issue](https://github.com/routexjs/docs/issues/new) to get your listed here!

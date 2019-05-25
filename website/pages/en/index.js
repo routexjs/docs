@@ -57,7 +57,7 @@ class HomeSplash extends React.Component {
           <PromoSection>
             <Button href={docUrl("introduction")}>Getting Started</Button>
             <Button href={docUrl("packages")}>Packages</Button>
-            <Button href={"https://github.com/Cretezy/routex"}>GitHub</Button>
+            <Button href={"https://github.com/routexjs/routex"}>GitHub</Button>
           </PromoSection>
         </div>
       </SplashContainer>

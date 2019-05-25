@@ -5,12 +5,12 @@ const siteConfig = {
   baseUrl: "/",
 
   projectName: "Routex",
-  organizationName: "Cretezy",
+  organizationName: "RoutexJS",
 
   headerLinks: [
     { doc: "introduction", label: "Docs" },
     { doc: "packages/index", label: "Packages" },
-    { href: "https://github.com/Cretezy/routex", label: "GitHub" }
+    { href: "https://github.com/routexjs/routex", label: "GitHub" }
   ],
 
   headerIcon: "img/icon.svg",
@@ -36,7 +36,7 @@ const siteConfig = {
   ogImage: "img/undraw_online.svg",
   twitterImage: "img/undraw_tweetstorm.svg",
 
-  repoUrl: "https://github.com/Cretezy/routex"
+  repoUrl: "https://github.com/routexjs/routex"
 };
 
 module.exports = siteConfig;

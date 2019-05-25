@@ -10,7 +10,7 @@ These steps will guide you through contributing to this project:
 - Clone it and install dependencies
 
   ```bash
-  git clone https://github.com/Cretezy/routex-docs
+  git clone https://github.com/routexjs/docs
   cd routex-docs/website
 
   yarn
@@ -24,4 +24,4 @@ These steps will guide you through contributing to this project:
 
 Make and commit your changes. Make sure the commands `npm run build`/`yarn build` and `npm run test`/`yarn test` are working.
 
-Finally send a [GitHub Pull Request](https://github.com/Cretezy/routex-docs/compare?expand=1) with a clear list of what you've done (read more [about pull requests](https://help.github.com/articles/about-pull-requests/)).
+Finally send a [GitHub Pull Request](https://github.com/routexjs/docs/compare?expand=1) with a clear list of what you've done (read more [about pull requests](https://help.github.com/articles/about-pull-requests/)).
