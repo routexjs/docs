@@ -16,7 +16,8 @@
       "request-id",
       "errors"
     ],
-    "Middlewares": ["middlewares", "express-middlewares"]
+    "Middlewares": ["middlewares", "express-middlewares"],
+    "Examples": ["scaling", "templates"]
   },
   "packages": {
     "Packages": [
