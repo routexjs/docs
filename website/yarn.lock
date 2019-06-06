@@ -5073,10 +5073,10 @@ rimraf@^2.5.4:
   dependencies:
     glob "^7.1.3"
 
-routex@^0.0.14:
-  version "0.0.14"
-  resolved "https://registry.yarnpkg.com/routex/-/routex-0.0.14.tgz#05d8229ae32f87a65eb13a93ccdc1081b85a4d71"
-  integrity sha512-9+TLquLAkgjKuzcRNcaX1MWmsAjBeb+uRUW3k9q8IReQltG6CU9RZ1agszByUQG5i7Gt6Os4H9VuKCWwK0x5xQ==
+routex@^0.0.15:
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/routex/-/routex-0.0.15.tgz#b00722e16d2445a72d73e8407fe8ab0b31a42dfb"
+  integrity sha512-9wey17bRxct8dzaJeX9Vx8t/Tf2Yq9lOgm0LmFYaaPzljGJBcayc+HMSdGkt+hxWPGBUwWaMOOo/84nbhuQZGQ==
   dependencies:
     "@types/node" "^12.0.2"
     parseurl "^1.3.3"
