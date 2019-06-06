@@ -1,0 +1,13 @@
+language: node_js
+cache: yarn
+
+notifications:
+  email: false
+
+node_js:
+  - "node"
+
+script:
+  - cd website
+  - yarn
+  - yarn build
