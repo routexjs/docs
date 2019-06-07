@@ -9,8 +9,7 @@
     "write-translations": "docusaurus-write-translations"
   },
   "devDependencies": {
-    "docusaurus": "^1.10.0",
-    "prettier": "^1.17.1",
-    "routex": "^0.0.14"
+    "docusaurus": "^1.11.0",
+    "prettier": "^1.18.0"
   }
 }
