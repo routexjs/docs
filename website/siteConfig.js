@@ -22,6 +22,11 @@ const siteConfig = {
     secondaryColor: "#4dabf7"
   },
 
+  algolia: {
+    apiKey: "4081a074943ff323f0b1c96abfa8c17f",
+    indexName: "routex"
+  },
+
   copyright: `Copyright © ${new Date().getFullYear()} Charles Crete`,
 
   highlight: {
