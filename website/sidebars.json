@@ -5,6 +5,7 @@
       "installation",
       "listen",
       "body",
+      "providers",
       "typescript"
     ],
     "Routes": [

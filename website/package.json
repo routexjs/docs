@@ -9,7 +9,7 @@
     "write-translations": "docusaurus-write-translations"
   },
   "devDependencies": {
-    "docusaurus": "^1.11.0",
-    "prettier": "^1.18.0"
+    "docusaurus": "^1.12.0",
+    "prettier": "^1.18.2"
   }
 }

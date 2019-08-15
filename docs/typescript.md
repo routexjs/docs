@@ -19,3 +19,25 @@ app.get("/", handler);
 
 app.listen(port).then(() => console.log(`Listening on ${port}`));
 ```
+
+## Extending Types
+
+The [context data](./context-data.md) object can be extended to be typed, using the following code:
+
+```typescript
+declare module "routex" {
+  interface ICtxData {
+    userId?: string;
+  }
+}
+```
+
+The [providers](./providers.md) object can be extended to be typed, using the following code:
+
+```typescript
+declare module "routex" {
+   interface ICtxProviders {
+     users: UserFacade;
+   }
+}
+```
