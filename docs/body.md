@@ -51,12 +51,11 @@ You can create your own body type by implementing the `Body` interface:
 class TestBody {
   constructor() {
     this.body = "test";
-    this.contentLength = this.body.length;
     this.contentType = "text/plain";
   }
 
-  write = response => {
-    response.write(this.body);
+  toBuffer = () => {
+    return Buffer.from(this.body, "utf8");
   };
 
   toString = () => this.body;
@@ -73,12 +72,11 @@ app.get("/", ctx => {
 import { IBody } from "routex";
 
 class TestBody implements IBody {
-  readonly body = "text";
-  readonly contentLength = this.body.length;
+  readonly body = "test";
   readonly contentType = "text/plain";
 
-  write = response => {
-    response.write(this.body);
+  toBuffer = () => {
+    return Buffer.from(this.body, "utf8");
   };
 
   toString = () => this.body;
