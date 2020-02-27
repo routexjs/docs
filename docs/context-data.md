@@ -11,6 +11,6 @@ app.middleware(ctx => {
 });
 
 app.get("/", ctx => {
-  ctx.body = new TextBody(ctx.data.name);
+  return new TextBody(ctx.data.name);
 });
 ```

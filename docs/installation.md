@@ -16,13 +16,17 @@ npm install routex
 Create an `index.js` and setup your first Routex server:
 
 ```js
-const { Routex, TextBody } = require("routex");
+const { Routex, TextBody, JsonBody } = require("routex");
 
 const port = process.env.PORT || 3000;
 const app = new Routex();
 
-app.get("/", ctx => {
-  ctx.body = new TextBody("Hello world!");
+app.get("/", () => {
+  return new TextBody("Hello world!");
+});
+
+app.get("/:name", ctx => {
+  return new JsonBody({ hello: ctx.params.name });
 });
 
 app.listen(port).then(() => console.log(`Listening on ${port}`));

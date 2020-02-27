@@ -31,7 +31,7 @@ app.get("/", ctx => {
   if (!name) {
     ctx.cookies.set("name", "john");
   }
-  ctx.body = new TextBody("Set name cookie");
+  return new TextBody("Set name cookie");
 });
 
 app.listen(port).then(() => console.log(`Listening on ${port}`));

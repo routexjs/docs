@@ -10,8 +10,8 @@ Child routers are useful to scale up your app and split it's functionally into s
 You can create a child router using `app.child(path)`:
 
 ```js
-app.child("/child").get("/", ctx => {
-  ctx.body = new TextBody("GET /child");
+app.child("/child").get("/", () => {
+  return new TextBody("GET /child");
 });
 ```
 
@@ -23,8 +23,8 @@ You can also create a router using the `Router` class, and attach it using `app.
 const { Router } = require("routex");
 const nameRouter = new Router();
 
-nameRouter.get("/", ctx => {
-  ctx.body = new TextBody("GET /name");
+nameRouter.get("/", () => {
+  return new TextBody("GET /name");
 });
 
 app.child("/name", nameRouter);

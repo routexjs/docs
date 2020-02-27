@@ -9,6 +9,8 @@ Throwing an error will stop the flow of execution and call your error handler.
 If the error is thrown during your route handling (not router-level middlewares),
 it will apply the end result of middlewares before calling your error handler.
 
+> Note: You cannot return a body in an error handler. You must use `ctx.body`
+
 ```js
 const { Routex, TextBody } = require("routex");
 

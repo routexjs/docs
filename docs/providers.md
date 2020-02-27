@@ -20,7 +20,7 @@ const app = new Routex({
 
 app.get("/", ctx => {
   const user = ctx.providers.users.getUser(1);
-  ctx.body = new JsonBody({ user });
+  return new JsonBody({ user });
 });
 ```
 
@@ -44,6 +44,6 @@ app.middleware(ctx => {
 app.get("/", ctx => {
   const user = ctx.providers.users.getUser(1);
   const image = ctx.providers.images.getImage(1);
-  ctx.body = new JsonBody({ user, image });
+  return new JsonBody({ user, image });
 });
 ```

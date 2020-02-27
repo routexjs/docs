@@ -17,6 +17,6 @@ const app = new Routex({
 });
 
 app.get("/", ctx => {
-  ctx.body = new TextBody(`Your request ID is: ${ctx.requestId}`);
+  return new TextBody(`Your request ID is: ${ctx.requestId}`);
 });
 ```

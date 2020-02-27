@@ -3,7 +3,8 @@ id: body
 title: Body
 ---
 
-Returning data in Routex uses the `ctx.body` prop.
+Returning a body can be done using `return` inside a handler.
+You may also set the body to the `ctx.body` prop.
 
 ## Text
 
@@ -12,8 +13,8 @@ You can return simple text using the `TextBody` class. The optional second argum
 ```js
 const { TextBody } = require("routex");
 
-app.get("/", ctx => {
-  ctx.body = new TextBody("Hello world!");
+app.get("/", () => {
+  return new TextBody("Hello world!");
 });
 
 app.get("/html", ctx => {
@@ -31,12 +32,12 @@ You can return JSON using the `JsonBody` class. The optional second argument is 
 ```js
 const { JsonBody } = require("routex");
 
-app.get("/", ctx => {
-  ctx.body = new JsonBody({ hello: "world" });
+app.get("/", () => {
+  return new JsonBody({ hello: "world" });
 });
 
-app.get("/pretty", ctx => {
-  ctx.body = new JsonBody({ hello: "world" }, { pretty: true });
+app.get("/pretty", () => {
+  return new JsonBody({ hello: "world" }, { pretty: true });
 });
 ```
 
@@ -62,7 +63,7 @@ class TestBody {
 }
 
 app.get("/", ctx => {
-  ctx.body = new TestBody();
+  return new TestBody();
 });
 ```
 
@@ -83,7 +84,7 @@ class TestBody implements IBody {
 }
 
 app.get("/", ctx => {
-  ctx.body = new TestBody();
+  return new TestBody();
 });
 ```
 

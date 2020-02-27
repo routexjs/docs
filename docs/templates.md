@@ -27,10 +27,10 @@ npm install pug
 const { TextBody } = require("routex");
 const cons = require("consolidate");
 
-app.get("/", ctx => {
+app.get("/", () => {
   const html = cons.pug("views/index.pug", { name: "Charles" });
 
-  ctx.body = new TextBody(html, "text/html");
+  return new TextBody(html, "text/html");
 });
 ```
 

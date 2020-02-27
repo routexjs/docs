@@ -12,10 +12,10 @@ const port = process.env.PORT || 3000;
 const app = new Routex();
 
 const handler: Handler = (ctx: ICtx) => {
-  ctx.body = new TextBody("Hello world!");
+  return new TextBody(`Hello ${ctx.params.name}!`);
 };
 
-app.get("/", handler);
+app.get("/:name", handler);
 
 app.listen(port).then(() => console.log(`Listening on ${port}`));
 ```
@@ -36,8 +36,8 @@ The [providers](./providers.md) object can be extended to be typed, using the fo
 
 ```typescript
 declare module "routex" {
-   interface ICtxProviders {
-     users: UserFacade;
-   }
+  interface ICtxProviders {
+    users: UserFacade;
+  }
 }
 ```

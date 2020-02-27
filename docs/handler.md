@@ -13,6 +13,10 @@ A handler can be:
   ```js
   const handler = async ctx => {};
   ```
+- A function/Promise returning data
+  ```js
+  const handler = () => new TextBody("...");
+  ```
 - A router (`new Router()`)
   ```js
   const handler = new Router();

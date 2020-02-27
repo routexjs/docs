@@ -13,7 +13,7 @@ app
     ctx.data.name = "john";
   })
   .get("/", ctx => {
-    ctx.body = new JsonBody({ name: ctx.data.name });
+    return new JsonBody({ name: ctx.data.name });
   });
 app
   .child("/child")
@@ -41,7 +41,7 @@ app
     }
   ])
   .get("/", ctx => {
-    ctx.body = new JsonBody({
+    return new JsonBody({
       firstName: ctx.data.firstName,
       lastName: ctx.data.lastName
     });

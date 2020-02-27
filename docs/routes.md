@@ -13,20 +13,20 @@ const { Routex, TextBody, JsonBody } = require("routex");
 const app = new Routex();
 
 app
-  .get("/", ctx => {
-    ctx.body = new TextBody("GET /");
+  .get("/", () => {
+    return new TextBody("GET /");
   })
   .post("/submit", ctx => {
-    ctx.body = new TextBody("POST /submit");
     ctx.statusCode = 400;
+    return new TextBody("POST /submit");
   })
-  .get("/json", ctx => {
-    ctx.body = new JsonBody({ name: "john" });
+  .get("/json", () => {
+    return new JsonBody({ name: "john" });
   })
   .get(
     "/catch",
-    ctx => {
-      ctx.body = new TextBody("GET /catch/*");
+    () => {
+      return new TextBody("GET /catch/*");
     },
     { exact: false }
   );

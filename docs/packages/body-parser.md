@@ -38,7 +38,7 @@ app.use(bodyParser.urlencoded());
 app.use(bodyParser.raw());
 
 app.get("/", ctx => {
-  ctx.body = new JsonBody(ctx.req.body);
+  return new JsonBody(ctx.req.body);
 });
 
 app.listen(port).then(() => console.log(`Listening on ${port}`));

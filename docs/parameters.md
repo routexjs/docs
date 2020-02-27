@@ -9,6 +9,6 @@ Parameters are available with the same syntax as [`path-to-regexp`](https://npmj
 
 ```js
 app.get("/:name", ctx => {
-  ctx.body = new TextBody(ctx.params.name);
+  return new TextBody(ctx.params.name);
 });
 ```

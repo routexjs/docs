@@ -8,6 +8,6 @@ Make sure to use the lowercase key name (`Authorization` becomes `authorization`
 
 ```js
 app.get("/", ctx => {
-  ctx.body = new TextBody(ctx.req.headers.host);
+  return new TextBody(ctx.req.headers.host);
 });
 ```
