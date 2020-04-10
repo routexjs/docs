@@ -128,3 +128,38 @@ class UsersController {
   }
 }
 ```
+
+### Injectable
+
+You can also use an injectable middleware, which is a class extending `interfaces.InjectableMiddleware`
+
+Example:
+
+```ts
+import { injectable } from "inversify";
+import { ICtx } from "routex";
+import { Controller, interfaces } from "@routex/inversify";
+
+@Controller()
+@injectable()
+export class TestMiddleware implements interfaces.InjectableMiddleware {
+  middleware(ctx: ICtx) {
+    ctx.data.name = "john";
+  }
+}
+
+// ...
+
+container.bind("TestMiddleware").to(TestMiddleware);
+
+// ...
+
+@injectable()
+@Controller()
+class UsersController {
+  @Get("/", ["TestMiddleware"])
+  getUsers(ctx: ICtx) {
+    // ...
+  }
+}
+```
