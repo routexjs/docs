@@ -1,82 +1,82 @@
 module.exports = {
-  title: 'Routex',
-  tagline: 'Modern Node Router',
-  url: 'https://routex.js.org',
-  baseUrl: '/',
-  favicon: 'img/icon.png',
-  organizationName: 'Routex',
-  projectName: 'RoutexJS',
+  title: "Routex",
+  tagline: "Modern Node Router",
+  url: "https://routex.js.org",
+  baseUrl: "/",
+  favicon: "img/icon.png",
+  organizationName: "Routex",
+  projectName: "RoutexJS",
   themeConfig: {
     navbar: {
-      title: 'Routex',
+      title: "Routex",
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/icon.svg',
+        alt: "My Site Logo",
+        src: "img/icon.svg",
       },
       links: [
         {
-          to: 'docs/introduction',
-          activeBasePath: 'docs',
-          label: 'Docs',
-          position: 'left',
+          to: "docs/introduction",
+          activeBasePath: "docs",
+          label: "Docs",
+          position: "left",
         },
         {
-          to: 'docs/packages/index',
-          activeBasePath: 'docs/packages',
-          label: 'Packages',
-          position: 'left',
+          to: "docs/packages/index",
+          activeBasePath: "docs/packages",
+          label: "Packages",
+          position: "left",
         },
-        {to: 'blog', label: 'Blog', position: 'left'},
+        { to: "blog", label: "Blog", position: "left" },
         {
-          href: 'https://github.com/routexjs/routex',
-          label: 'GitHub',
-          position: 'right',
+          href: "https://github.com/routexjs/routex",
+          label: "GitHub",
+          position: "right",
         },
       ],
     },
     footer: {
-      style: 'dark',
+      style: "dark",
       links: [
         {
-          title: 'Routex',
+          title: "Routex",
           items: [
             {
-              label: 'Docs',
-              to: 'docs/introduction',
+              label: "Docs",
+              to: "docs/introduction",
             },
             {
-              label: 'Packages',
-              to: 'docs/packages/index',
+              label: "Packages",
+              to: "docs/packages/index",
             },
             {
-              label: 'Blog',
-              to: 'blog',
+              label: "Blog",
+              to: "blog",
             },
           ],
         },
         {
-          title: 'Community',
+          title: "Community",
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'http://stackoverflow.com/questions/tagged/routex',
+              label: "Stack Overflow",
+              href: "http://stackoverflow.com/questions/tagged/routex",
             },
             {
-              label: 'Spectrum',
-              href: 'https://spectrum.chat/routex',
+              label: "Spectrum",
+              href: "https://spectrum.chat/routex",
             },
           ],
         },
         {
-          title: 'More',
+          title: "More",
           items: [
             {
-              label: 'GitHub',
-              href: 'https://github.com/routexjs/routex',
+              label: "GitHub",
+              href: "https://github.com/routexjs/routex",
             },
             {
-              label: 'npm',
-              href: 'https://www.npmjs.com/package/routex',
+              label: "npm",
+              href: "https://www.npmjs.com/package/routex",
             },
           ],
         },
@@ -84,20 +84,19 @@ module.exports = {
       copyright: `Copyright © ${new Date().getFullYear()} Charles Crete (Routex)`,
     },
     prism: {
-      theme: require('prism-react-renderer/themes/nightOwl'),
+      theme: require("prism-react-renderer/themes/nightOwl"),
     },
   },
   presets: [
     [
-      '@docusaurus/preset-classic',
+      "@docusaurus/preset-classic",
       {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          editUrl:
-            'https://github.com/routexjs/routex-docs/edit/master/',
+          sidebarPath: require.resolve("./sidebars.js"),
+          editUrl: "https://github.com/routexjs/routex-docs/edit/master/",
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       },
     ],
