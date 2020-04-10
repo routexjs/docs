@@ -8,6 +8,5 @@ node_js:
   - "node"
 
 script:
-  - cd website
   - yarn
   - yarn build
