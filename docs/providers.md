@@ -9,16 +9,16 @@ You can use `ctx.providers` to store providers (for dependency injection). This 
 const users = {
   getUser(id) {
     // ...
-  }
+  },
 };
 
 const app = new Routex({
   providers: {
-    users
-  }
+    users,
+  },
 });
 
-app.get("/", ctx => {
+app.get("/", (ctx) => {
   const user = ctx.providers.users.getUser(1);
   return new JsonBody({ user });
 });
@@ -29,19 +29,19 @@ You can also inject new providers in middlewares (the root providers will not be
 ```js
 const app = new Routex({
   providers: {
-    users
-  }
+    users,
+  },
 });
 
-app.middleware(ctx => {
+app.middleware((ctx) => {
   ctx.providers.images = {
     getImage(id) {
       // ...
-    }
+    },
   };
 });
 
-app.get("/", ctx => {
+app.get("/", (ctx) => {
   const user = ctx.providers.users.getUser(1);
   const image = ctx.providers.images.getImage(1);
   return new JsonBody({ user, image });

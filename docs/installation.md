@@ -25,7 +25,7 @@ app.get("/", () => {
   return new TextBody("Hello world!");
 });
 
-app.get("/:name", ctx => {
+app.get("/:name", (ctx) => {
   return new JsonBody({ hello: ctx.params.name });
 });
 

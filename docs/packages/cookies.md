@@ -26,7 +26,7 @@ const app = new Routex();
 
 app.use(cookies());
 
-app.get("/", ctx => {
+app.get("/", (ctx) => {
   const name = ctx.cookies.get("name");
   if (!name) {
     ctx.cookies.set("name", "john");
@@ -42,11 +42,11 @@ app.listen(port).then(() => console.log(`Listening on ${port}`));
 You can use `ctx.cookies.get(cookie)` or `ctx.cookies.all` to get cookies:
 
 ```js
-app.get("/a", ctx => {
+app.get("/a", (ctx) => {
   const name = ctx.cookies.get("name");
 });
 
-app.get("/b", ctx => {
+app.get("/b", (ctx) => {
   const { name } = ctx.cookies.all;
 });
 ```
@@ -56,7 +56,7 @@ app.get("/b", ctx => {
 You can use `ctx.cookies.set(cookie, value)` set cookies:
 
 ```js
-app.get("/", ctx => {
+app.get("/", (ctx) => {
   ctx.cookies.set("name", "john");
 });
 ```
@@ -79,7 +79,7 @@ You may also pass [options](https://www.npmjs.com/package/cookie#options-1) (see
 You can use `ctx.cookies.remove(cookie)` remove cookies:
 
 ```js
-app.get("/remove", ctx => {
+app.get("/remove", (ctx) => {
   ctx.cookies.remove("name");
 });
 ```

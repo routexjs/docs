@@ -16,7 +16,7 @@ app
   .get("/", () => {
     return new TextBody("GET /");
   })
-  .post("/submit", ctx => {
+  .post("/submit", (ctx) => {
     ctx.statusCode = 400;
     return new TextBody("POST /submit");
   })
@@ -32,11 +32,11 @@ app
   );
 
 // Long form
-app.route("POST", "/", ctx => {
+app.route("POST", "/", (ctx) => {
   ctx.body = new TextBody("GET /");
 });
 
-app.any("/", ctx => {
+app.any("/", (ctx) => {
   // Will catch all other methods on /
   ctx.body = new TextBody("DELETE/PUTCH/PUT /");
 });

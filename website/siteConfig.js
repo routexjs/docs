@@ -10,7 +10,7 @@ const siteConfig = {
   headerLinks: [
     { doc: "introduction", label: "Docs" },
     { doc: "packages/index", label: "Packages" },
-    { href: "https://github.com/routexjs/routex", label: "GitHub" }
+    { href: "https://github.com/routexjs/routex", label: "GitHub" },
   ],
 
   headerIcon: "img/icon.svg",
@@ -19,18 +19,18 @@ const siteConfig = {
 
   colors: {
     primaryColor: "#228be6",
-    secondaryColor: "#4dabf7"
+    secondaryColor: "#4dabf7",
   },
 
   algolia: {
     apiKey: "4081a074943ff323f0b1c96abfa8c17f",
-    indexName: "routex"
+    indexName: "routex",
   },
 
   copyright: `Copyright © ${new Date().getFullYear()} Charles Crete`,
 
   highlight: {
-    theme: "monokai"
+    theme: "monokai",
   },
 
   scripts: ["https://buttons.github.io/buttons.js"],
@@ -44,7 +44,7 @@ const siteConfig = {
   repoUrl: "https://github.com/routexjs/routex",
 
   editUrl: "https://github.com/routexjs/docs/edit/master/docs/",
-  usePrism: true
+  usePrism: true,
 };
 
 module.exports = siteConfig;

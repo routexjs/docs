@@ -37,7 +37,7 @@ app.use(bodyParser.urlencoded());
 // Content-Type: application/octet-stream (to Buffer)
 app.use(bodyParser.raw());
 
-app.get("/", ctx => {
+app.get("/", (ctx) => {
   return new JsonBody(ctx.req.body);
 });
 

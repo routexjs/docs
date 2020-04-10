@@ -7,11 +7,11 @@ A handler can be:
 
 - A function
   ```js
-  const handler = ctx => {};
+  const handler = (ctx) => {};
   ```
 - A Promise (`async (ctx) => ...`)
   ```js
-  const handler = async ctx => {};
+  const handler = async (ctx) => {};
   ```
 - A function/Promise returning data
   ```js
@@ -28,8 +28,8 @@ A handler can be:
     myMiddleware1,
     myMiddleware2,
     myMiddleware3,
-    ctx => {},
+    (ctx) => {},
     myRouter,
-    async ctx => {}
+    async (ctx) => {},
   ];
   ```

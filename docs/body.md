@@ -17,7 +17,7 @@ app.get("/", () => {
   return new TextBody("Hello world!");
 });
 
-app.get("/html", ctx => {
+app.get("/html", (ctx) => {
   ctx.body = new TextBody(
     "<html><body><h1>Hello world!</h1></body></html>",
     "text/html"
@@ -62,7 +62,7 @@ class TestBody {
   toString = () => this.body;
 }
 
-app.get("/", ctx => {
+app.get("/", (ctx) => {
   return new TestBody();
 });
 ```
@@ -83,7 +83,7 @@ class TestBody implements IBody {
   toString = () => this.body;
 }
 
-app.get("/", ctx => {
+app.get("/", (ctx) => {
   return new TestBody();
 });
 ```

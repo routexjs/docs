@@ -30,9 +30,9 @@ app.appMiddleware(websocket());
 // Must be a GET request.
 app.get(
   "/",
-  websocket.socketHandler(socket => {
+  websocket.socketHandler((socket) => {
     // Echo server
-    socket.on("message", data => {
+    socket.on("message", (data) => {
       socket.send("You said: " + data);
     });
   })
@@ -50,7 +50,7 @@ app.appMiddleware(
   websocket({
     backlog: 10, // he maximum length of the queue of pending connections
     perMessageDeflate: true, // Enable/disable permessage-deflate
-    maxPayload: 1024 * 1024 // The maximum allowed message size in bytes
+    maxPayload: 1024 * 1024, // The maximum allowed message size in bytes
     // ...
   })
 );
@@ -68,7 +68,7 @@ app.get(
     socket.send(`Hello ${ctx.params.name}!`);
 
     // Receive data
-    socket.on("message", data => {
+    socket.on("message", (data) => {
       if (data === "Goodbye!") {
         // Close socket
         socket.close();

@@ -8,15 +8,15 @@ Each request is automatically set a request ID (UUID by default), accessible usi
 ```js
 // Disables request ID (will be undefined)
 const app = new Routex({
-  requestId: false
+  requestId: false,
 });
 
 // Using a custom request ID generator
 const app = new Routex({
-  requestId: () => new Date().getMilliseconds()
+  requestId: () => new Date().getMilliseconds(),
 });
 
-app.get("/", ctx => {
+app.get("/", (ctx) => {
   return new TextBody(`Your request ID is: ${ctx.requestId}`);
 });
 ```

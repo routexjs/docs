@@ -17,7 +17,7 @@ app.listen().then(async ({ port, server, close }) => {
   console.log(`Listening on :${port}`);
   console.log(`Max connections: ${server.maxConnections}`);
   // Wait 1s
-  await new Promise(resolve => setTimeout(resolve, 1000));
+  await new Promise((resolve) => setTimeout(resolve, 1000));
   // Close server,
   await close();
 });
@@ -39,8 +39,8 @@ const certificate = fs.readFileSync("server.crt");
 app.listen(3000, {
   https: {
     key: privateKey,
-    cert: certificate
-  }
+    cert: certificate,
+  },
 });
 ```
 
@@ -52,8 +52,8 @@ app.listen(3000);
 app.listen(3001, {
   https: {
     key: privateKey,
-    cert: certificate
-  }
+    cert: certificate,
+  },
 });
 ```
 

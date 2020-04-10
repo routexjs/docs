@@ -8,22 +8,22 @@ A middleware is a handler that can return a function/Promise (to be called at th
 
 ```js
 app
-  .middleware(ctx => {
+  .middleware((ctx) => {
     // Attaches data to the request in the root router
     ctx.data.name = "john";
   })
-  .get("/", ctx => {
+  .get("/", (ctx) => {
     return new JsonBody({ name: ctx.data.name });
   });
 app
   .child("/child")
-  .middleware(ctx => {
+  .middleware((ctx) => {
     return () => {
       // Will append ' ... smith!' to all requests in this router
       ctx.res.write(" ... smith!");
     };
   })
-  .get("/", ctx => {
+  .get("/", (ctx) => {
     ctx.res.write(`My name is ${ctx.data.name}`);
   });
 ```
@@ -33,17 +33,17 @@ You can also apply multiple middlewares at once:
 ```js
 app
   .middleware([
-    ctx => {
+    (ctx) => {
       ctx.data.firstName = "john";
     },
-    ctx => {
+    (ctx) => {
       ctx.data.lastName = "smith";
-    }
+    },
   ])
-  .get("/", ctx => {
+  .get("/", (ctx) => {
     return new JsonBody({
       firstName: ctx.data.firstName,
-      lastName: ctx.data.lastName
+      lastName: ctx.data.lastName,
     });
   });
 ```

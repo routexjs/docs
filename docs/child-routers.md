@@ -35,10 +35,10 @@ app.child("/name", nameRouter);
 You can also apply middlewares when creating child routers:
 
 ```js
-const firstNameMiddleware = ctx => {
+const firstNameMiddleware = (ctx) => {
   ctx.data.firstName = "john";
 };
-const lastNameMiddleware = ctx => {
+const lastNameMiddleware = (ctx) => {
   ctx.data.lastName = "smith";
 };
 

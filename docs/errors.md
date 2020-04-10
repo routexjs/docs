@@ -20,7 +20,7 @@ const customErrorHandler = (ctx, error) => {
 
 const app = new Routex({ errorHandler: customErrorHandler });
 
-app.get("/", ctx => {
+app.get("/", (ctx) => {
   throw new Error("Some error");
 });
 ```
