@@ -17,4 +17,4 @@ title: Introduction
 
 Routex uses a context (`ctx`) object to store all information related to a request and response.
 
-The `ctx` object is used for incoming data such as [parameters](parameters.md), and response with [`ctx.body`].
+The `ctx` object is used for incoming data such as [parameters](parameters.md), and response with [`ctx.body`](body.md).
