@@ -26,6 +26,7 @@ module.exports = {
     "packages/body-parser",
     "packages/cookies",
     "packages/hooks",
+    "packages/inversify",
     "packages/websocket",
   ],
 };
