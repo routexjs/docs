@@ -25,7 +25,7 @@ Setup your app:
 
 ```js
 const { Routex, TextBody } = require("routex");
-const { hooksHandler, useGetParam, useSetBody } = require("@routex/hooks");
+const { hooksHandler, useGetParam } = require("@routex/hooks");
 
 const port = process.env.PORT || 3000;
 const app = new Routex();
@@ -35,7 +35,7 @@ app.get(
   hooksHandler(() => {
     const name = useGetParam("name");
 
-    useSetBody(new TextBody(name));
+    return new TextBody(name);
   })
 );
 
