@@ -140,7 +140,6 @@ import { injectable } from "inversify";
 import { ICtx } from "routex";
 import { Controller, interfaces } from "@routex/inversify";
 
-@Controller()
 @injectable()
 export class TestMiddleware implements interfaces.InjectableMiddleware {
   middleware(ctx: ICtx) {
