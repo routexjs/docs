@@ -15,6 +15,8 @@ app.child("/child").get("/", () => {
 });
 ```
 
+> Note: Order of registering child routers is important. If router A has `/a` and router B has `/a/b`, router B should be registered before A because it would catch all paths with `/a`.
+
 ## Router Class
 
 You can also create a router using the `Router` class, and attach it using `app.child`:
@@ -45,6 +47,18 @@ const lastNameMiddleware = (ctx) => {
 const { Router } = require("routex");
 const childRouter = new Router();
 
+app.child("/firstName", childRouter).middleware(firstNameMiddleware);
+app
+  .child("/name", childRouter)
+  .middleware([firstNameMiddleware, lastNameMiddleware]);
+
+// Or
+
+app.child("/firstName").middleware(firstNameMiddleware);
+app.child("/name").middleware([firstNameMiddleware, lastNameMiddleware]);
+
+// Or
+
 app.child("/firstName", [childRouter, firstNameMiddleware]);
 app.child("/name", [childRouter, [firstNameMiddleware, lastNameMiddleware]]);
 
@@ -52,9 +66,4 @@ app.child("/name", [childRouter, [firstNameMiddleware, lastNameMiddleware]]);
 
 app.child("/firstName", [null, firstNameMiddleware]);
 app.child("/name", [null, [firstNameMiddleware, lastNameMiddleware]]);
-
-// Or
-
-app.child("/firstName").middleware(firstNameMiddleware);
-app.child("/name").middleware([firstNameMiddleware, lastNameMiddleware]);
 ```
