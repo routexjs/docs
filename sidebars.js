@@ -7,6 +7,7 @@ module.exports = {
       "body",
       "providers",
       "typescript",
+      "comparison",
     ],
     Routes: [
       "routes",
