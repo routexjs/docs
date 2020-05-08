@@ -105,11 +105,11 @@ Example:
 ```ts
 const symbolMiddlewareKey = Symbol();
 
-container.bind("stringMiddlewareKey").toContantValue((ctx: ICtx) => {
+container.bind("stringMiddlewareKey").toConstantValue((ctx: ICtx) => {
   // ...
 });
 
-container.bind(symbolMiddlewareKey).toContantValue((ctx: ICtx) => {
+container.bind(symbolMiddlewareKey).toConstantValue((ctx: ICtx) => {
   // ...
 });
 
